@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href=".css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Website</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Nexto</title>
 </head>
-<body class="text-center">
-    <h2>Formulir Data Pengguna</h2>
-    <form id="formUser">
-        <label>Nama:</label><br>
-        <input type="text" id="nama" required /><br><br>
-        
-        <label>Email:</label><br>
-        <input type="email" id="email" required /><br><br>
+<body>
+    <header>
+        <h1>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</h1>
+        <p>Memuat gabungan antara HTML dan CSS</p>
+    </header>
 
-        <label>Pesan:</label><br>
-        <textarea id="pesan" rows="3" required></textarea><br><br>
-        
-        <button type="submit">Simpan Data</button>
-    </form>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
 
-    <div id="hasil"></div>
-    <script>
-    const form = document.getElementById('formUser');
-    const hasil = document.getElementById('hasil');
+    <div class="container">
+        <div class="content">
+            <h2>Konten Utama</h2>
+            <p>Selamat datang di website umtuk belajar Web Design dimana gabungan antara HTML dan CSS.</p><br>
+            <img src="unklab1.jpg" alt="UK"><br><br>
+            <h4>Tabel Data</h4><br>
+            <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Kota</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Andi</td>
+            <td>Jakarta</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Budi</td>
+            <td>Bandung</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Wilsen</td>
+            <td>Manado</td>
+        </tr>
+    </table><br>
+            <h4>Formulir</h4><br>
+            <form>
+            <fieldset>
+            <legend>Formulir Pendaftaran</legend><br>
+            <label>Nama:</label><br>
+            <input type="text"><br><br>
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+            <label>Pilih Kota:</label><br>
+            <select>
+                <optgroup label="Jawa">
+                    <option>Jakarta</option>
+                    <option>Surabaya</option>
+                    <option>Bandung</option>
+                </optgroup>
+                <optgroup label="Sumatera">
+                    <option>Padang</option>
+                    <option>Medan</option>
+                    <option>Palembang</option>
+                </optgroup>
+            </select><br><br>
+            <input type="checkbox" onclick="alrt()"><label>Saya setuju dangan syarat dan ketentuan</label><br><br>
+            <input type="button" value="Kirim" onclick="cnf()" class="button">
+            </fieldset>
+            </form>
+        </div>
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-    const nama = document.getElementById('nama').value;
-    const email = document.getElementById('email').value;
-    const pesan = document.getElementById('pesan').value;
-
-    const dataUser = {nama, email, pesan};
-    localStorage.setItem('dataUser', JSON.stringify(dataUser));
-
-    tampilkanData();
-    }
-    );
-
-    function tampilkanData() {
-        const data = localStorage.getItem('dataUser');
-        if (data) {
-            const user = JSON.parse(data);
-            hasil.innerHTML = `
-            <h3> Data Tersimpan: </h3>
-            <p><strong>Nama:</strong> ${user.nama}</p>
-            <p><strong>Email:</strong> ${user.email}</p>
-            <p><strong>Pesan:</strong> ${user.pesan}</p>
-        `;
-        }
-    }
-    window.onload = tampilkanData;
-</script>
+        <div class="sidebar ani">
+            <h3>Tentang Website</h3>
+            <p>Website ini adalah contoh latihan HTML + CSS responsif sederhana dengan animasi.</p><br>
+            <p><b>Menu Sidebar</b></p>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="#">Formulir</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Website Latihan</p>
+    </footer>
 </body>
 </html>
