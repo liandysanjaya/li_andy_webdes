@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</h1>
+        <p>Memuat gabungan antara HTML dan CSS</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h2>Konten Utama</h2>
+            <p>Selamat datang di website umtuk belajar Web Design dimana gabungan antara HTML dan CSS.</p><br>
+            <img src="unklab1.jpg" alt="UK"><br><br>
+            <h4>Tabel Data</h4><br>
+            <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Kota</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Andi</td>
+            <td>Jakarta</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Budi</td>
+            <td>Bandung</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Wilsen</td>
+            <td>Manado</td>
+        </tr>
+    </table><br>
+            <h4>Formulir</h4><br>
+            <form>
+            <fieldset>
+            <legend>Formulir Pendaftaran</legend><br>
+            <label>Nama:</label><br>
+            <input type="text"><br><br>
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+            <label>Pilih Kota:</label><br>
+            <select>
+                <optgroup label="Jawa">
+                    <option>Jakarta</option>
+                    <option>Surabaya</option>
+                    <option>Bandung</option>
+                </optgroup>
+                <optgroup label="Sumatera">
+                    <option>Padang</option>
+                    <option>Medan</option>
+                    <option>Palembang</option>
+                </optgroup>
+            </select><br><br>
+            <input type="checkbox" onclick="alrt()"><label>Saya setuju dangan syarat dan ketentuan</label><br><br>
+            <input type="button" value="Kirim" onclick="cnf()" class="button">
+            </fieldset>
+            </form>
+        </div>
+
+        <div class="sidebar ani">
+            <h3>Tentang Website</h3>
+            <p>Website ini adalah contoh latihan HTML + CSS responsif sederhana dengan animasi.</p><br>
+            <p><b>Menu Sidebar</b></p>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="#">Formulir</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Website Latihan</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(230, 226, 220);
+}
+
+header {
+    background-color: rgb(28, 87, 23);
+    text-align: center;
+    color: white;
+    padding: 10px 1px;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar {
+    background-color: rgb(192, 188, 182);
+    flex: 1;
+    padding: 25px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebar:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    background-color: rgb(37, 37, 37);
+    overflow: hidden;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+    background-color: rgb(88, 88, 88);
+    color: white;
+}
+
+footer {
+    background-color: rgb(47, 109, 42);
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    background-color: rgb(219, 196, 180);
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+}
+
+.button {
+    padding: 10px;
+    background-color: rgb(20, 83, 20);
+    color: white;
+    border: none;
+}
+
+legend {
+    border: 2px;
+}
+
+fieldset {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+input {
+    padding: 3px;
+}
