@@ -28,6 +28,9 @@ header {
 .container {
     display: flex;
     margin: 20px;
+}
+
+.content, .sidebar {
     height: 100%;
 }
 
