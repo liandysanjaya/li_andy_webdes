@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</h1>
+        <p>Memuat gabungan antara HTML dan CSS</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <h2>Hubungi Kami</h2>
+    <form id="formUser">
+        <label>Nama:</label><br>
+        <input type="text" id="nama" required /><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" id="email" required /><br><br>
+
+        <label>Pesan:</label><br>
+        <textarea id="pesan" rows="3" required></textarea><br><br>
+        
+        <button type="submit">Simpan Data</button>
+    </form>
+
+    <div id="hasil"></div>
+    <script>
+    const form = document.getElementById('formUser');
+    const hasil = document.getElementById('hasil');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+    const nama = document.getElementById('nama').value;
+    const email = document.getElementById('email').value;
+    const pesan = document.getElementById('pesan').value;
+
+    const dataUser = {nama, email, pesan};
+    localStorage.setItem('dataUser', JSON.stringify(dataUser));
+
+    tampilkanData();
+    }
+    );
+
+    function tampilkanData() {
+        const data = localStorage.getItem('dataUser');
+        if (data) {
+            const user = JSON.parse(data);
+            hasil.innerHTML = `
+            <h3> Data Tersimpan: </h3>
+            <p><strong>Nama:</strong> ${user.nama}</p>
+            <p><strong>Email:</strong> ${user.email}</p>
+            <p><strong>Pesan:</strong> ${user.pesan}</p>
+        `;
+        }
+    }
+    window.onload = tampilkanData;
+</script>
+        <div class="sidebar ani">
+            <h3>Tentang Website</h3>
+            <p>Website ini adalah contoh latihan HTML + CSS responsif sederhana dengan animasi.</p><br>
+            <p><b>Menu Sidebar</b></p>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="#">Formulir</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Website Latihan</p>
+    </footer>
+</body>
+</html>
