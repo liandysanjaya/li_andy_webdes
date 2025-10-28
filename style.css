@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+html,  body {
+    height: 100%;
+}
+
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(230, 226, 220);
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -19,6 +27,9 @@ header {
 .container {
     display: flex;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .content {
@@ -63,7 +74,7 @@ footer {
     background-color: rgb(47, 109, 42);
     padding: 10px;
     color: white;
-    margin-top: 20px;
+    margin-top: auto;
     text-align: center;
 }
 
