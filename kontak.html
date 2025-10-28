@@ -18,7 +18,7 @@
         <a href="tentang.html">Tentang</a>
         <a href="kontak.html">Kontak</a>
     </nav>
-
+    <div>
     <h2>Hubungi Kami</h2>
     <form id="formUser">
         <label>Nama:</label><br>
@@ -34,10 +34,12 @@
     </form>
 
     <div id="hasil"></div>
+    </div>
     <script>
+    
     const form = document.getElementById('formUser');
     const hasil = document.getElementById('hasil');
-
+    
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
